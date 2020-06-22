@@ -176,3 +176,16 @@ body {
 		color: #0f1417;
 	}
 }
+
+.wave__svg {
+	width: 120px;
+	height: 9px;
+
+	&--black {
+		fill: #000;
+	}
+
+	&--white {
+		fill: #fff;
+	}
+}

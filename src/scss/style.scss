@@ -9,7 +9,8 @@
 //-----------------------------------------------------------------------------------------------------------
 /* Start Header */
 
-.header {
+.header,
+.buy {
 	&__wrapper {
 		@include background-img;
 		padding: 61px 0px 30px;
@@ -105,6 +106,297 @@
 }
 
 /* End Header */
+/* Start Inside */
+.inside {
+
+	&__wrapper {
+		@include background-img;
+		padding: 53px 44px;
+	}
+
+	&__inner {
+		text-align: center;
+	}
+
+	&__img {
+		display: block;
+		margin: 0 auto;
+		max-width: 1000px;
+		height: 290px;
+		object-fit: contain;
+	}
+
+	&__title {
+		margin-bottom: 36px;
+	}
+
+	&__subtitle {
+		margin-bottom: 44px;
+	}
+
+	&__wave {
+		margin-bottom: 12px;
+	}
+}
+
+/* End Inside */
+/* Start Bread-line */
+
+/* End Bread-line */
+/* Start Buy */
+.buy {
+
+	&__inner {
+		text-align: center;
+	}
+
+	&__title {
+		margin-bottom: 31px;
+	}
+
+	&__subtitle {
+		margin-bottom: 40px;
+	}
+
+	&__block-link {
+		margin-top: 30px;
+	}
+
+	&__wave {
+		margin-bottom: 50px;
+	}
+}
+
+.shops {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	flex-wrap: wrap;
+}
+
+.shop {
+	flex-basis: 25%;
+	display: block;
+	margin-bottom: 40px;
+
+	img {
+		display: block;
+		margin: 0 auto;
+	}
+}
+
+/* End Buy */
+/* Start Facts */
+.facts {
+
+	&__wrapper {
+		text-align: center;
+		padding: 77px 0px 61px;
+	}
+
+	&__title {
+		margin-bottom: 57px;
+	}
+
+	&__inner {
+		display: flex;
+		justify-content: space-between;
+		margin-bottom: 67px;
+	}
+}
+
+.facts-item {
+	max-width: 150px;
+	width: 100%;
+
+	&__img {
+		width: 61px;
+		height: 51px;
+		object-fit: contain;
+		margin-bottom: 32px;
+	}
+
+	&__title {
+		margin-bottom: 17px;
+		color: $text;
+		font-size: 16px;
+		font-weight: 700;
+		letter-spacing: 0.4px;
+	}
+
+	&__text {
+		color: $text;
+		letter-spacing: 0.35px;
+	}
+}
+
+/* End Facts */
+/* Start Coupon */
+.coupon {
+
+	&__wrapper {
+		background-color: #f9f7f7;
+	}
+
+	&__inner {
+		padding: 82px 0px 81px;
+		color: $text;
+		display: flex;
+		justify-content: space-between;
+	}
+}
+
+.coupon-info {
+	max-width: 613px;
+	width: 100%;
+
+	&__title {
+		font-size: 32px;
+		font-weight: 700;
+		letter-spacing: 0.8px;
+		margin-bottom: 30px;
+	}
+
+	&__text {
+		line-height: 30px;
+		letter-spacing: 0.35px;
+	}
+
+	&__text-row {
+		margin-bottom: 24px;
+
+		&:last-child {
+			margin-bottom: 37px;
+		}
+	}
+}
+
+.coupon-form {
+
+	&__email-input {
+		display: block;
+		width: 348px;
+		height: 40px;
+		border: 1px solid #000000;
+		background-color: transparent;
+		padding: 15px 20px;
+		margin-bottom: 15px;
+
+		&::placeholder {
+			color: #000101;
+			font-family: 'Nunito';
+			font-size: 14px;
+			font-weight: 400;
+			letter-spacing: 0.35px;
+		}
+
+		&:hover,
+		&:focus {
+			outline: transparent;
+			border: 2px solid #000000;
+		}
+	}
+
+	&__checkbox-label {
+		display: block;
+		margin-bottom: 15px;
+		font-size: 12px;
+		letter-spacing: 0.3px;
+		padding-left: 36px;
+		position: relative;
+
+		&:before,
+		&:after {
+			content: "";
+			position: absolute;
+		}
+
+		&:before {
+			width: 20px;
+			height: 20px;
+			border: 1px solid #000000;
+			left: 0;
+			top: -4px;
+		}
+	}
+
+	&__checkbox-input {
+		display: none;
+	}
+}
+
+.coupon-form__checkbox-input:checked~.coupon-form__checkbox-label:after {
+	width: 15px;
+	height: 9px;
+	transform: rotate(135deg);
+	left: 2px;
+	top: -1px;
+	border-top: 1px solid #000;
+	border-right: 1px solid #000;
+}
+
+.coupon-card {
+	width: 445px;
+	min-height: 500px;
+	position: relative;
+	color: $text;
+	text-align: center;
+	padding: 59px 80px 58px;
+	@include opensans-600;
+	&:after{
+		content:"";
+		position: absolute;
+		width: 41px;
+		height: 62px;
+		left:-18px;
+		bottom:100px;
+		background-repeat:no-repeat;
+		background-image:url(../images/scissors_icon.png);
+	}
+
+	&__svg {
+		position: absolute;
+		top: 0;
+		left: 0;
+		fill: transparent;
+	}
+
+	&__title {
+		text-transform: uppercase;
+		font-size: 48px;
+	}
+
+	&__title--free {
+		font-size: 120px;
+		font-weight: 400;
+	}
+
+	&__subtitle {
+		font-size: 24px;
+		letter-spacing: 0.6px;
+		margin-bottom: 40px;
+	}
+
+	&__subtitle--logo {
+		display: block;
+		margin: 7px 0px;
+		font-family: 'KaushanScript';
+		font-size: 48px;
+		font-weight: 400;
+		letter-spacing: 1.2px;
+	}
+
+
+	&__text {
+		letter-spacing: 0.35px;
+	}
+}
+
+.coupon__link {
+	background-color: transparent;
+}
+
+/* End Coupon */
 /* Start Footer */
 .footer {
 
@@ -223,11 +515,13 @@
 				background-position: 0px 0px;
 			}
 		}
+
 		&--instagram:hover {
 			&:after {
 				background-position: 54px 0px;
 			}
 		}
+
 		&--facebook:hover {
 			&:after {
 				background-position: 26px 0px;
