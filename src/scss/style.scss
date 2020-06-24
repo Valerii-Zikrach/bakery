@@ -61,6 +61,10 @@
 		border-bottom: 2px solid transparent;
 		transition: all .5s;
 
+		&--active {
+			border-bottom: 2px solid #fff;
+		}
+
 		&:hover,
 		&:focus {
 			border-bottom: 2px solid #fff;
@@ -105,13 +109,21 @@
 	margin-bottom: 80px;
 }
 
+.header-btn {
+	overflow: hidden;
+	position: relative;
+	z-index: 10;
+	padding: 0;
+	border: none;
+}
+
 /* End Header */
 /* Start Inside */
 .inside {
 
 	&__wrapper {
 		@include background-img;
-		padding: 53px 44px;
+		padding: 53px 0px 44px;
 	}
 
 	&__inner {
@@ -149,7 +161,7 @@
 	}
 
 	&__slider {
-		width: 730px;
+		max-width: 730px;
 		margin: 0 auto 46px;
 	}
 
@@ -192,7 +204,7 @@
 	&__title,
 	&__weight,
 	&__price {
-		display: inline-block;
+		display: block;
 		color: #0f1417;
 		line-height: 18px;
 	}
@@ -279,13 +291,14 @@
 		cursor: pointer;
 		font-size: 0;
 		transition: all .3s;
-			&:hover,
-			&:focus {
 
-				&:after {
-					color:rgb(226, 226, 226);
-				}
+		&:hover,
+		&:focus {
+
+			&:after {
+				color: rgb(226, 226, 226);
 			}
+		}
 
 		&:after {
 			content: "\f104";
@@ -293,7 +306,7 @@
 			font-family: 'icomoon';
 			font-size: 40px;
 			top: 50%;
-			left:50%;
+			left: 50%;
 			transform: translate(-50%, -50%);
 			color: #000;
 			transition: all .3s;
@@ -372,6 +385,7 @@
 	&__inner {
 		display: flex;
 		justify-content: space-between;
+		flex-wrap: wrap;
 		margin-bottom: 67px;
 	}
 }
@@ -469,7 +483,7 @@
 	}
 
 	&__checkbox-label {
-		display: block;
+		display: inline-block;
 		margin-bottom: 15px;
 		font-size: 12px;
 		letter-spacing: 0.3px;
@@ -507,13 +521,20 @@
 }
 
 .coupon-card {
-	width: 445px;
-	min-height: 500px;
+	margin-left: 30px;
+	max-width: 445px;
+	width: 100%;
 	position: relative;
 	color: $text;
 	text-align: center;
-	padding: 59px 80px 58px;
+	padding: 59px 80px 37px;
 	@include opensans-600;
+	transition: all .5s;
+
+	&:hover,
+	&:focus {
+		background-color: #fff;
+	}
 
 	&:after {
 		content: "";
@@ -521,7 +542,7 @@
 		width: 41px;
 		height: 62px;
 		left: -18px;
-		bottom: 100px;
+		bottom: 75px;
 		background-repeat: no-repeat;
 		background-image: url(../images/scissors_icon.png);
 	}
@@ -580,6 +601,7 @@
 	&__inner {
 		display: flex;
 		justify-content: space-between;
+		flex-wrap: wrap;
 		color: #ffffff;
 	}
 
@@ -588,9 +610,13 @@
 		margin-bottom: 25px;
 	}
 
-	&-cols {
+	&-col__links {
 		display: flex;
 	}
+}
+
+.col-contacts {
+	margin-left: 72px;
 }
 
 .footer-address__link,
@@ -608,9 +634,6 @@
 }
 
 .footer-col {
-	&--contacts {
-		margin-left: 72px;
-	}
 
 	&__title {
 		@include opensans-600;
@@ -666,6 +689,8 @@
 			content: "";
 			width: 26px;
 			height: 26px;
+			left: 0;
+			top: 0;
 			background-image: url('../images/socials.png');
 			transition: all .5s;
 		}

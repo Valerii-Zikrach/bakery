@@ -106,6 +106,7 @@ body {
 .block-link {
 	font-size: 0;
 	position: relative;
+	z-index: 5;
 	width: 40px;
 	height: 40px;
 	display: inline-block;
@@ -139,6 +140,8 @@ body {
 
 .logo {
 	display: inline-block;
+	position: relative;
+	z-index: 10;
 
 	&__img {
 		width: 152px;
