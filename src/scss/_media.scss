@@ -159,6 +159,10 @@
 }
 
 @media(max-width:768px) {
+	.block-link {
+		animation: none;
+	}
+
 	.header {
 		&-top {
 			margin-bottom: 50px;
@@ -274,15 +278,17 @@
 }
 
 @media(max-width:575px) {
-	.menu{
+	.menu {
 		&__list {
 			display: block;
 			padding: 125px 0px 0px;
 		}
-		&__link{
+
+		&__link {
 			padding: 10px;
 		}
 	}
+
 	.coupon-card {
 		width: 290px;
 		padding: 20px;
@@ -372,18 +378,26 @@
 			margin-bottom: 0px;
 		}
 
-		&__link:first-child {
-			margin-right: 0px;
-			margin-bottom: 15px;
+		&__link {
+			display: block;
+			width: fit-content;
+			margin: 0 auto;
+
+			&:first-child {
+				margin: 0 auto 15px;
+			}
 		}
 	}
 }
 
 @media(max-width:450px) {
 	.bread-line__link {
+		display: block;
+		width: fit-content;
+		margin: 0 auto;
+
 		&:first-child {
-			margin-right: 0px;
-			margin-bottom: 10px;
+			margin: 0 auto 15px;
 		}
 	}
 
@@ -408,11 +422,12 @@
 		}
 
 		&__link {
-			display: inline-block;
+			display: block;
+			width: fit-content;
+			margin: 0 auto;
 
 			&:first-child {
-				margin-right: 0px;
-				margin-bottom: 10px;
+				margin: 0 auto 15px;
 			}
 		}
 	}

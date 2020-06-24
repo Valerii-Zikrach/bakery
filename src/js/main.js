@@ -48,6 +48,6 @@ $(function () {
 	$('.header-btn').on('click', function () {
 		$('.menu').slideToggle();
 	});
-	
+
 	new WOW().init();
 });

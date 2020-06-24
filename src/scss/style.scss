@@ -8,7 +8,6 @@
 //
 //-----------------------------------------------------------------------------------------------------------
 /* Start Header */
-
 .header,
 .buy {
 	&__wrapper {
@@ -362,10 +361,57 @@
 	flex-basis: 25%;
 	display: block;
 	margin-bottom: 40px;
-
+	animation: backInUp 2s;
+	&:nth-child(2){
+		animation-duration: 2.5s;
+	}
+	&:nth-child(3){
+		animation-duration: 3s;
+	}
+	&:nth-child(4){
+		animation-duration: 3.5s;
+	}
+	&:nth-child(5){
+		animation-duration: 4s;
+	}
+	&:nth-child(6){
+		animation-duration: 4.5s;
+	}
+	&:nth-child(7){
+		animation-duration: 5s;
+	}
+	&:nth-child(8){
+		animation-duration: 5.5s;
+	}
 	img {
 		display: block;
 		margin: 0 auto;
+	}
+}
+
+.shop,
+.facts-item {
+	animation: backInUp 2s;
+	&:nth-child(2){
+		animation-duration: 2.5s;
+	}
+	&:nth-child(3){
+		animation-duration: 3s;
+	}
+	&:nth-child(4){
+		animation-duration: 3.5s;
+	}
+	&:nth-child(5){
+		animation-duration: 4s;
+	}
+	&:nth-child(6){
+		animation-duration: 4.5s;
+	}
+	&:nth-child(7){
+		animation-duration: 5s;
+	}
+	&:nth-child(8){
+		animation-duration: 5.5s;
 	}
 }
 
@@ -418,6 +464,7 @@
 /* End Facts */
 /* Start Coupon */
 .coupon {
+	overflow: hidden;
 
 	&__wrapper {
 		background-color: #f9f7f7;
@@ -434,6 +481,8 @@
 .coupon-info {
 	max-width: 613px;
 	width: 100%;
+	animation: backInRight 2s;
+	
 
 	&__title {
 		font-size: 32px;
@@ -530,6 +579,8 @@
 	padding: 59px 80px 37px;
 	@include opensans-600;
 	transition: all .5s;
+	animation: backInRight 2s;
+	animation-duration: 3s;
 
 	&:hover,
 	&:focus {
@@ -592,6 +643,7 @@
 /* End Coupon */
 /* Start Footer */
 .footer {
+	overflow: hidden;
 
 	&__wrapper {
 		@include background-img;
@@ -634,7 +686,7 @@
 }
 
 .footer-col {
-
+	animation: backInUp 2s;
 	&__title {
 		@include opensans-600;
 		font-size: 16px;
