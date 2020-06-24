@@ -1,0 +1,17 @@
+$text: #0b0806;
+
+@mixin background-img {
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+@mixin opensans-400 {
+	font-family: 'OpenSans';
+	font-weight: 400;
+}
+
+@mixin opensans-600 {
+	font-family: 'OpenSans';
+	font-weight: 600;
+}
